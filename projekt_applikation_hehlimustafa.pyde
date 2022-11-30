@@ -16,3 +16,9 @@ def draw():
     text("Start: Fatima lebt in Afghanistan. Sie will kein Kopftuch tragen.\nDazu betreibt sie ein Krankenhaus nur für Mädchen.\nDeshalb muss sie aus Afghanistan fliehen.\nWelches der beiden Fluchmittel soll sie benutzen?", 431, 400)
     fill(255, 255, 255)
     
+#Funktion Entscheidung Pfeil links/rechts
+    if keyCode == LEFT:
+        line(700, 400, 550, 250)
+    if keyCode == RIGHT:
+        line(700, 400, 550, 250)
+        

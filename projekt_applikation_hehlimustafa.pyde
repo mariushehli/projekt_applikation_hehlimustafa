@@ -4,6 +4,7 @@ def setup():
     image(photo, 0, 0)
     photo.resize(862, 500)
     image(photo, 0, 0)
+    rect(10,380,840,100)
     
 def draw():
     rect(10,380,840,150)

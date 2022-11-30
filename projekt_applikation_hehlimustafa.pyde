@@ -6,7 +6,10 @@ def setup():
     image(photo, 0, 0)
     
 def draw():
-    textSize(32)
-    textAlign(CENTER)
-    text("Start: Fatima lebt in Afghanistan. Sie will kein Kopftuch tragen. Dazu betreibt sie ein Krankenhaus nur für Mädchen. Deshalb muss sie aus Afghanistan fliehen. Welches der beiden Fluchmittel soll sie benutzen?", 431, 450)
+    rect(10,380,840,150)
     fill(0, 0, 0)
+    textSize(16)
+    textAlign(CENTER)
+    text("Start: Fatima lebt in Afghanistan. Sie will kein Kopftuch tragen.\nDazu betreibt sie ein Krankenhaus nur für Mädchen.\nDeshalb muss sie aus Afghanistan fliehen.\nWelches der beiden Fluchmittel soll sie benutzen?", 431, 400)
+    fill(255, 255, 255)
+    

@@ -7,7 +7,6 @@ def setup():
     rect(10,380,840,100)
     
 def draw():
-    rect(10,380,840,150)
     fill(0, 0, 0)
     textSize(18)
     textAlign(CENTER)

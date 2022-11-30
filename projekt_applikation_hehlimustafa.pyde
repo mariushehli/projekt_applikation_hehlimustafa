@@ -9,7 +9,7 @@ def setup():
 def draw():
     rect(10,380,840,150)
     fill(0, 0, 0)
-    textSize(16)
+    textSize(18)
     textAlign(CENTER)
     text("Start: Fatima lebt in Afghanistan. Sie will kein Kopftuch tragen.\nDazu betreibt sie ein Krankenhaus nur für Mädchen.\nDeshalb muss sie aus Afghanistan fliehen.\nWelches der beiden Fluchmittel soll sie benutzen?", 431, 400)
     fill(255, 255, 255)

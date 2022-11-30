@@ -18,7 +18,12 @@ def draw():
     
 #Funktion Entscheidung Pfeil links/rechts
     if keyCode == LEFT:
-        line(700, 400, 550, 250)
+        line(700, 400, 525, 350)
     if keyCode == RIGHT:
-        line(700, 400, 550, 250)
+        line(700, 400, 525, 350)
+        
+    if keyCode == LEFT:
+        line(525, 350, 400, 300)
+    if keyCode == RIGHT:
+        line(525, 350, 500, 250)
         

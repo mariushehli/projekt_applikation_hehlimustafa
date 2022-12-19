@@ -9,7 +9,6 @@ def setup():
     step = 0
 #Textfeld----------------------------------------------------------------------------------------------
 def draw():
-    print(mouseX, mouseY)
     global step
     if step == 0:
         #Textfeld für Startschritt zeichnen (Schritt 0/Aufrufen des Programms)

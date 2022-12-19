@@ -1,4 +1,4 @@
-#Karte als Hintegrundbild----------------------------------------------------
+#Karte als Hintegrundbild----------------------------------------------------------------------------
 def setup():
     size(862, 500)
     photo = loadImage("IMG_1522.jpg")
@@ -7,15 +7,12 @@ def setup():
     image(photo, 0, 0)
     global step 
     step = 0
-#Textfeld------------------------------------------------------------------
-   
-    
-#Text----------------------------------------------------------------------
+#Textfeld----------------------------------------------------------------------------------------------
 def draw():
     print(mouseX, mouseY)
     global step
     if step == 0:
-        # Textfeld für ersten Schritt zeichnen (Text soll text für Anfang des Spiels sein)
+        #Textfeld für Startschritt zeichnen (Schritt 0/Aufrufen des Programms)
         rect(0,380,862,200)
         fill(0, 0, 0)
         textSize(16)
@@ -23,11 +20,12 @@ def draw():
         text("Schritt: " + str(step) + " " + getTextForStep() , 431, 400)
         fill(255, 255, 255)
     
-# wird aufgerufen, wenn eine Taste gedrückt wird
+#Schritte werden aufgerufen, wenn eine Taste gedrückt wird (links oder rechts)-------------------------
 def keyPressed():
-    # Schritt setzen (jeder Knoten in eurem Spiel hat eine "ID", das ist der step)
+    #Schritt setzen (jeder Knoten hat einen Step)---
     global step
     lastStep = step
+    #Entscheidungen linke Pfeiltaste---
     if keyCode == LEFT:
         if step == 0:
             step = 1
@@ -45,6 +43,7 @@ def keyPressed():
             step = 9 #dann über Italien in die Schweiz
         elif step == 7: #wenn in Kroatien
             step = 10 #dann über Österreich in die Schweiz
+    #Entscheidungen rechte Pfeiltaste---
     if keyCode == RIGHT:
         if step == 0: #wenn von Start
             step = 2 #dann mit Pfeiltaste rechts nach Iran mit Auto
@@ -65,18 +64,18 @@ def keyPressed():
         elif step == 8: #wenn in Kroatien über Ungarn
             step = 10 #dann über Österreich in die Schweiz
         
-    # Textfeld neu zeichnen und mit aktualisierten Text entsprechend des steps füllen (Text kann nicht entfernt werden, muss immer überzeichnet werden)
+    # Textfeld neu zeichnen und mit aktualisierten Text entsprechend des Schritts füllen (Überschreibung)----
     rect(0,380,862,200)
     fill(0, 0, 0)
     textSize(16)
     textAlign(CENTER)
-    # für den step (Knoten) der entspr. Text schreiben mit getTextForStep()
+    #Für den Schritt (Knoten) den entspr. Text schreiben
     text("Schritt: " + str(step) + " " + getTextForStep() , 431, 400)
     fill(255, 255, 255)
-    # linie hinzufügen für entspr. step
+    #Linie hinzufügen für entspr. step
     drawLineForStep(lastStep)
         
-# Für jeden Knoten (step) einen Text zurückgeben
+#Für jeden Knoten (step) einen Text zurückgeben----------------------------------------------------------------
 def getTextForStep():
     global step
     if step == 0:
@@ -102,8 +101,8 @@ def getTextForStep():
     if step == 10:
         return "Du hast es im Zug bis in die Schweiz geschafft. Endlich bist du angekommen!"
         
-# für jeden Knoten (step) eine Linie zeichnen
-# z.B. wenn die erste Entscheidung = RECHTS ist, dann wäre das der Step 1
+#Für jeden Schritt (Knoten) eine Linie zeichnen
+#Bspw. wenn die erste Entscheidung = RECHTS ist, dann ist das der Schritt 1------------------------------------------------
 def drawLineForStep(lastStep):
     global step
     if step == 1:
